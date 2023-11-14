@@ -17,7 +17,7 @@ class GoogleChatController extends Controller {
 				'messages' => $messages,
 			];
 
-			$apiKey = 'AIzaSyC2Whsh9P9TLB2z7wt_zu2uwA_xgC4dJ7s';
+			$apiKey = config('app.maker_suit_api_key');
 			$modelName = 'chat-bison-001';
 			$temperature = 1;
 			$candidateCount = 1;
@@ -40,14 +40,14 @@ class GoogleChatController extends Controller {
 				RequestOptions::QUERY => [
 					'key' => $apiKey,
 				],
-				RequestOptions::VERIFY => 'C:\wamp64\bin\php\php8.0.25\extras\ssl\cacert.pem', // Specify the path to the cacert.pem file
+				// RequestOptions::VERIFY => 'C:\wamp64\bin\php\php8.0.25\extras\ssl\cacert.pem', // Specify the path to the cacert.pem file
 
 			]);
 
 			$data = json_decode($response->getBody(), true);
 			return response()->json(['status' => true, 'chat' => $data]);
 		} catch (\Throwable $th) {
-			return response()->json(['status' => false]);
+			return response()->json(['status' => false, 'message' => $th->getMessage(), 'line' => $th->getLine(), 'file' => $th->getFile()]);
 
 		}
 		// Do something with the generated text
