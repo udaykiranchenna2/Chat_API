@@ -26,7 +26,7 @@ Add database configuration in .env file
 
 Add MAKER_SUIT_API_KEY key in .env (GET IT FROM MAKER SUIT GENERATIVE AI)
 ```bash
-php artisan migrate command
+php artisan migrate
 ```
 ```bash
 php artisan serve 
