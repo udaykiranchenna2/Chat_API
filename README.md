@@ -16,22 +16,23 @@ Clone the Repository
 git clone https://github.com/udaykiranchenna2/Chat_API.git
 ```
 ```bash
-composer install #for Laravel 
+composer install 
 ```
 ```bash
-npm install #for node package Installation
+npm install
 ```
-
 Add database configuration in .env file
 
 
 Add MAKER_SUIT_API_KEY key in .env (GET IT FROM MAKER SUIT GENERATIVE AI)
-```
-
-run php artisan migrate command
+```bash
+php artisan migrate command
 ```
 ```bash
-run php artisan serve and npm run dev commands
+php artisan serve 
+```
+```bash
+npm run dev
 ```
 ```bash
 Register with you email and Start using you own chat bot.
