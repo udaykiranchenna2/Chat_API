@@ -12,20 +12,22 @@ NOTE: I developed it with in 15 mins just for dev purpose. ALL THE BEST MY FELLO
 
 ## Installation
 Clone the Repository
-
+```bash
+git clone https://github.com/udaykiranchenna2/Chat_API.git
+```
 ```bash
 composer install #for Laravel 
 ```
 ```bash
 npm install #for node package Installation
 ```
-```bash
-Add DATABSE configuration in .env file
-```
-```bash
+
+Add database configuration in .env file
+
+
 Add MAKER_SUIT_API_KEY key in .env (GET IT FROM MAKER SUIT GENERATIVE AI)
 ```
-```bash
+
 run php artisan migrate command
 ```
 ```bash
